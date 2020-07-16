@@ -1,11 +1,11 @@
-# 程序控制
+# 一 程序控制
 1. 标识符 identifier
 2. 关键字 keyword
 3. 运算符 operator
 4. 分隔符 delimiter
 5. 字面量 literal
 
-## 1 标识符
+## 1.1 标识符
 ### 用户自定义标识符
 例如：fmt.Println 表示使用 fmt包中的Println标识符
 
@@ -26,22 +26,22 @@
 但Go区分大小写的编程语言，所以Test和test在Go语言程序表示不同的标识符
 
 
-## 2 关键字
+## 1.2 关键字
 Go作为静态编译型语言，关键字一共有25个
 - 包的导入与声明：import,package
 - 程序实体声明与定义：var,type,func,interface,map,struct,chan,const
 - 流程控制：if,continue,for,return,go,case,goto,switch,select,else,break,default,defer,fallthrough,range
 
-## 3 字面量
+## 1.3 字面量
 表示值的一种标记法（常量）
 - 用于表示基础数据类型值的各种字面量
 - 用于表示用户构造的自定义复合数据类型的类型字面量
 - 表示复合数据类型的值的复合字面量
 
-## 4 分隔符
+## 1.4 分隔符
 小数点，逗号，分号，冒号和省略号
 
-## 5 运算符
+## 1.5 运算符
 **运算符**：
 - ![Go语言运算符说明1](.README_images/ed0f5285.png)
 - ![Go语言运算符说明2](.README_images/dbb19d64.png)
@@ -50,11 +50,11 @@ Go作为静态编译型语言，关键字一共有25个
 - ![3](.README_images/a9f7c952.png)
 - 优先级相同，根据从左到右的顺序依次操纵。
 
-## 6 注释
+## 1.6 注释
 与C/C++相同,//,/**/
 
-# Go语言基础概念
-## 常量 const
+# 二 Go语言基础概念
+## 2.1 常量 const
 编译时就确定的值，禁止写权限
 - 显示定义
 - 隐式定义
@@ -84,8 +84,8 @@ const (
 ```
 Demo/enum.go
 
-## 变量 var
-### 1. 变量声明 var
+## 2.2 变量 var
+### 2.2.1 变量声明 var
 声明格式是： var identifier type
 - type放在了最后需要注意
 - 单独定义`var a int`
@@ -100,7 +100,7 @@ Demo/enum.go
 
 也可动态声明：var identifier
 
-### 2. 局部变量声明 :=
+### 2.2.2 局部变量声明 :=
 `a := 1` 等价于 `var a = 1`
 **这种方式只能用在函数体内,不能用于全局变量的声明与赋值**
 
@@ -119,10 +119,10 @@ Demo/enum.go
 - 指针：nil
 - 没有指定类型：默认int,0
 
-### 3.匿名变量
+### 2.2.3 匿名变量
 局部变量定义了必须使用,使用_更优雅
 
-### 4.init函数
+### 2.2.4 init函数
 除了在全局声明初始化实体，也可以在init函数中初始化。
 - init函数优先级比main高
 - init不能手动调用

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func foo(slice []int) []int {
 	//...
@@ -38,8 +41,32 @@ func main() {
 	fmt.Println(cap(slice), slice)
 
 	////////////////////切片的传递
+	//fmt.Println()
+	//slice3 := make([]int, 1e6)
+	//slice4 := foo(slice3)
+	//fmt.Println(cap(slice4))
+	/////////////////////////////
+
+	/////////////////////////////////////
+	var s string
+	slices := []string{"10", "20", "10", "20", "10"}
+	for _, value := range slices {
+		if !strings.Contains(s, fmt.Sprintf("[%s %s]", value, value)) {
+			s += fmt.Sprintf("[%s %s]", value, value)
+		}
+	}
+	fmt.Println("s=", s)
+	///////////////////////////////////
 	fmt.Println()
-	slice3 := make([]int, 1e6)
-	slice4 := foo(slice3)
-	fmt.Println(cap(slice4))
+	var n = 100
+	var sum float64
+
+	for i := 1; i <= n; i++ {
+		x1 := 1 / float64(10*i-5)
+		x2 := 1 / float64(10*i)
+		sum += x1
+		sum -= x2
+	}
+
+	fmt.Printf("%.2f", sum)
 }

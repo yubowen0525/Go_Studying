@@ -16,6 +16,10 @@ func main() {
 	if exists {
 		fmt.Println(value)
 	}
+
+	for _, key := range colors {
+		fmt.Println(key)
+	}
 	///方式2
 	value = colors["Red"]
 	if value != "" {
@@ -25,4 +29,5 @@ func main() {
 	////////////////元素删除
 	delete(colors, "Red")
 	fmt.Println(colors)
+
 }

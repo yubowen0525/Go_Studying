@@ -33,4 +33,12 @@ func main() {
 	ID := m_json.ID
 	fmt.Println(Type, ID)
 
+	// json str to map
+	var dat map[string]interface{}
+	if err = json.Unmarshal(b, &dat); err == nil {
+		fmt.Println("==============str to map =====================")
+		fmt.Println(dat)
+		fmt.Println(dat["ID"], dat["Type"])
+	}
+
 }

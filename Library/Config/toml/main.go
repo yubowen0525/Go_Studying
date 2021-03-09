@@ -33,7 +33,7 @@ func Config() *tomlConfig {
 	//var once sync.Once
 
 	once.Do(func() {
-		filePath, err := filepath.Abs("./Library/Open_Source_Library/Config_Library/toml/test.toml")
+		filePath, err := filepath.Abs("./Library/Open_Source_Library/Config/toml/test.toml")
 		if err != nil {
 			panic(err)
 		}

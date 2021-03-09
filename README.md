@@ -15,8 +15,11 @@
 - [第九部分 并发编程](./Concurrent-programming/README.md)
 - [第十部分 网络编程](./Network_Program/README.md)
 - [第十一部分 I/O编程](./I-O_Program/README.md)
-- [第十二部分 常用库](./Library)
+- [第十二部分 常用库](Library/Library)
 
 # 标准库
-- [json](./Standard_Library/json/main.go)
-- [time](./Standard_Library/time/main.go)
+- [json](Library/Standard_library/json)
+- [time](Library/Standard_library/time)
+- [gorm](Library/DB/gorm)
+- [promptui](Library/CLI/Command/promptui)
+- [ssh](Library/Standard_library/ssh)

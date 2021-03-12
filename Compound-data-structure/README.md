@@ -76,3 +76,23 @@ newslice = append(slice,60)
 
 ### 3.3 映射传递给函数
 函数间传递映射**并不会制造出该映射的一个副本**。实际上，当传递映射给一个函数，对这个映射做了修改，所有对这个映射的引用都会察觉到这个修改。
+
+# 四 链表
+## list
+Go语言的链表实现在标准库的container/list代码包中。这个代码包中有两个公开的程序实体——List和Element，List实现了一个双向链表（以下简称链表），而Element则代表了链表中元素的结构。
+- List：代表链表
+- Element：代表node
+[demo](./Demo/list.go)
+
+## ring
+只有一层概念, prev,next,value
+
+```
+type Ring struct {
+	next, prev *Ring
+	Value      interface{} // for use by client; untouched by this library
+}
+```
+
+
+[demo](./Demo/ring.go)
